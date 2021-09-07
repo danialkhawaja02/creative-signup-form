@@ -1,0 +1,126 @@
+<html lang="en-US">
+  <head>
+    <title>HTML Page</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+      integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2 id="main-heading">Sign Up</h2>
+    <h4 id="sub-heading">
+      Already have an account? <strong><a href="#">Sign in</a></strong>
+    </h4>
+    <form onsubmit="return false">
+      <fieldset>
+        <section class="section-elements">
+          <label>First Name</label>
+          <input
+            id="first_name"
+            name="Firstname"
+            type="text"
+            placeholder="enter your name"
+          />
+
+          <label>Last Name</label>
+          <input
+            id="last_name"
+            name="Lastname"
+            type="text"
+            placeholder="enter your last name"
+            required="required"
+          />
+
+          <label>Email</label>
+          <input
+            id="email"
+            name="email-adress"
+            type="email"
+            placeholder="enter your email"
+            required="required"
+          />
+
+          <label>Phone Number</label>
+          <input
+            id="phone_number"
+            name="phonenumber"
+            type="tel"
+            placeholder="(000)-000-0000"
+            required="required"
+          />
+
+          <label>Address</label>
+          <input
+            id="address"
+            name="input"
+            type="text"
+            placeholder="enter your address"
+            required="required"
+          />
+
+          <label>City</label>
+          <input
+            id="city"
+            name="city"
+            type="text"
+            placeholder="enter your city name"
+            required="required"
+          />
+
+          <label>URL</label>
+          <input
+            id="url"
+            name="profile_url"
+            type="url"
+            placeholder="enter your url"
+          />
+
+          <label>Service</label>
+          <input
+            id="service"
+            name="service_date"
+            type="date"
+            min="2000-01-01"
+            max="2999-12-31"
+          />
+        </section>
+      </fieldset>
+      <div class="submit-btn-container">
+        <input
+          id="submit-btn"
+          onclick="show_output()"
+          type="submit"
+          value="ENROLL"
+        />
+      </div>
+    </form>
+    <script>
+      function show_output() {
+        var first_name = document.getElementById("first_name").value;
+        var last_name = document.getElementById("last_name").value;
+        var email = document.getElementById("email").value;
+        var phone_number = document.getElementById("phone_number").value;
+        var address = document.getElementById("address").value;
+        var city = document.getElementById("city").value;
+        var url = document.getElementById("url").value;
+        var service = document.getElementById("service").value;
+
+        console.log(first_name,"\n",last_name,"\n",email,"\n",phone_number,"\n",address,"\n",city,"\n",url,"\n",service);
+      }
+      show_output();
+    </script>
+  </body>
+</html>
+
+<!-- 
+    TASK
+    
+    1) give each <input> a selector, maybe an id?
+    2) add a callback function to the submit/enroll button
+    3) the callback should console log all the values in the input text box
+
+ -->
